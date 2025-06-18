@@ -1,12 +1,16 @@
 const express = require('express') //Requiring express package
 const app= express() // storing it in app  variable throughout we use it.
 
+//saying nodejs to set all requiremen config for ejs (to use ejs)
+app.set('view engine','ejs')
+
+
 app.get('/',(req,res)=>{
-    res.send("<mark>Hello World, I'm Aayush</mark>")
+    res.render("home")
 })
 
 app.get('/about',(req,res)=>{
-    res.send("Welcome To About Page")
+    res.render("about")
 })
 app.get('/contact',(req,res)=>{
     res.send("From Contact Page")
