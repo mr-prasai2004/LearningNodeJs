@@ -16,6 +16,9 @@ app.get('/contact',(req,res)=>{
     res.send("From Contact Page")
 })
 
+app.get('/landing',(req,res)=>{
+    res.render("landing")
+})
 
 app.listen(3000,()=>{
     console.log("Server is Running in port 3000")
