@@ -6,7 +6,8 @@ app.set('view engine','ejs')
 
 
 app.get('/',(req,res)=>{
-    res.render("home")
+    const name="Aayush Prasai"
+    res.render("home",{hello: name})
 })
 
 app.get('/about',(req,res)=>{
