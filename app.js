@@ -2,7 +2,7 @@ const express = require('express') //Requiring express package
 const app= express() // storing it in app  variable throughout we use it.
 
 app.get('/',(req,res)=>{
-    res.send("<h1>Hello World, I'm Aayush Don</h1>")
+    res.send("<mark>Hello World, I'm Aayush</mark>")
 })
 
 app.get('/about',(req,res)=>{
@@ -10,7 +10,6 @@ app.get('/about',(req,res)=>{
 })
 app.get('/contact',(req,res)=>{
     res.send("From Contact Page")
-
 })
 
 
