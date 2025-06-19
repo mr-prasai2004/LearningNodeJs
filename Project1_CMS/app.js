@@ -1,5 +1,8 @@
 const express = require('express')
 const app = express()
+// const test = require('dotenv')
+// test.config() or
+require('dotenv').config()
 
 
 
@@ -14,7 +17,8 @@ app.get('/addblog',(req,res)=>{
     res.render('addBlog')
 })
 
+const PORT = process.env.PORT;
 
-app.listen(3000,()=>{
-    console.log("server is running in port 3000");
+app.listen(PORT,()=>{
+    console.log("server is running in port "+PORT);
 })
