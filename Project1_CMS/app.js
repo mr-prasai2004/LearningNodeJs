@@ -41,6 +41,8 @@ app.put('/editblog/:id',async(res,req)=>{
 })
 
 
+
+ 
 //telling node.js to accept incomming data(parsing data)
 // app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -48,14 +50,19 @@ app.use(express.urlencoded({extended: true}))
 //api for handling formdata
 app.post('/addBlog',async(req,res)=>{
     // console.log(req.body)
-       await blogs.create({
-        title:req.body.title,
-        subTitle: req.body.subTitle,
-        description: req.body.description
-    })
-    res.send("Blog Created Successfully")
-})
+    //    const title= req.body.title;
+    //    const subTitle= req.body.subTitle;
+    //    const description = req.body.description;
+    //Alternative
+    const{title, subTitle, description}= req.body
 
+       await blogs.create({
+        title,
+        subTitle,
+        description,
+       })
+    res.send("/")
+})
 const PORT = process.env.PORT;
 
 app.listen(PORT,()=>{
