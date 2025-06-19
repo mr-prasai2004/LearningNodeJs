@@ -3,7 +3,8 @@ const app = express()
 // const test = require('dotenv')
 // test.config() or
 require('dotenv').config()
-
+require('./model/index')
+require('./model/userModel')
 
 
 
